@@ -29,7 +29,7 @@ export class AuctionMonitorApp {
 
     this.logger.log(`User is authenticated!`);
 
-    this.logger.log(`Fetching running Auctions`);
+    this.logger.log(`Fetching running Auctions...`);
     const auctions = await this.carOnSaleClient.getRunningAuctions();
 
     if (!auctions || !Array.isArray(auctions)) {

@@ -32,8 +32,10 @@ container.bind<ICache>(DependencyIdentifier.CACHE).to(Cache);
 const app = container.resolve(AuctionMonitorApp);
 
 /*
- * Start the application
- */
+* Start the application
+*/
 (async () => {
   await app.start();
 })();
+
+export { container };
