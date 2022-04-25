@@ -1,8 +1,9 @@
+import { Auction } from "../../../utilities/types";
+
 /**
  * This service describes an interface to access auction data from the CarOnSale API.
  */
 export interface ICarOnSaleClient {
-
-    getRunningAuctions(): Promise<any /* TODO: Introduce a type */>
-
+  authenticate(email: string, password: string): Promise<boolean>;
+  getRunningAuctions(): Promise<Auction[] | undefined>;
 }
